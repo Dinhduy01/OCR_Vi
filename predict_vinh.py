@@ -41,15 +41,15 @@ boxes, img2  = det_model(
     img1,
     crop_region=True,                               #Crop detected regions for OCR
     return_result=True,                             # Return plotted result
-    output_path=f"C:/xampp/htdocs/Desktop/OCR_VI//results/{img_id}"   #Path to save cropped regions
+    output_path=f"C:/xampp/htdocs/Desktop/OCR_VI/results/{img_id}"   #Path to save cropped regions
 )
 
 plt.imshow(img2)
 plt.show()
 
-img_paths = os.listdir(f"C:/xampp/htdocs/Desktop/OCR_VI//results/{img_id}/crops")  # Cropped regions
+img_paths = os.listdir(f"C:/xampp/htdocs/Desktop/OCR_VI/results/{img_id}/crops")  # Cropped regions
 img_paths.sort(key=natural_keys)
-img_paths = [os.path.join(f"C:/xampp/htdocs/Desktop/OCR_VI//results/{img_id}/crops", i) for i in img_paths]
+img_paths = [os.path.join(f"C:/xampp/htdocs/Desktop/OCR_VI/results/{img_id}/crops", i) for i in img_paths]
 import csv
 import re
 def correct_spelling(dictionary_file, paragraph):
